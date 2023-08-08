@@ -1,5 +1,5 @@
 run:
-	bb multi_dup.clj --amount 100
+	bb multi_dup.clj --amount ${AMOUNT}
 
 clean:
 	rm -rf workdir/*
