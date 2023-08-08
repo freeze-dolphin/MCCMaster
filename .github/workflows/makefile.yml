@@ -1,0 +1,21 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Babashka - A Clojure babushka for the grey areas of Bash.
+      uses: turtlequeue/setup-babashka@v1.5.0
+
+    - name: Run
+      run: make run
