@@ -7,8 +7,8 @@ mkdir -p workdir/"$uid"
 cp mcc/MinecraftClient.ini workdir/"$uid"/conf.ini
 
 sed -i 's/__USERNAME__/'"$(bb assemble_player_name.clj)"'/g' workdir/"$uid"/conf.ini
-sed -i 's/__HOSTNAME__/'"127.0.0.1"'/g' workdir/"$uid"/conf.ini
-sed -i 's/__PORT__/'"25565"'/g' workdir/"$uid"/conf.ini
+sed -i 's/__HOSTNAME__/'"$HOSTNAME"'/g' workdir/"$uid"/conf.ini
+sed -i 's/__PORT__/'"$PORT"'/g' workdir/"$uid"/conf.ini
 sed -i 's/__PASSWD__/'"$RANDOM$RANDOM"'/g' workdir/"$uid"/conf.ini
 #sed -i 's/{{BOT_TOKEN}}/'"$BOT_TOKEN"'/g' workdir/"$uid"/conf.ini
 
