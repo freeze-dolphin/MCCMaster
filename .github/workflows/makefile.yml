@@ -22,4 +22,6 @@ jobs:
     - name: Run
       env:
         AMOUNT: ${{ env.AMOUNT }}
+        HOSTNAME: ${{ env.HOSTNAME }}
+        PORT: ${{ env.PORT }}
       run: make run
